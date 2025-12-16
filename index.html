@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changhao Song | USTC</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* 保持极简风格，为了阅读体验优化了字体和间距 */
+        body {
+            font-family: 'Lato', sans-serif; /* 学术界常用的无衬线字体 */
+            line-height: 1.6;
+            color: #333;
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        a { color: #00407a; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        
+        .header-container { display: flex; align-items: center; margin-bottom: 40px; }
+        .avatar { 
+            width: 160px; height: 160px; border-radius: 50%; object-fit: cover; margin-right: 40px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 { font-size: 2.2em; margin-bottom: 5px; }
+        h2 { font-size: 1.4em; border-bottom: 1px solid #ddd; padding-bottom: 8px; margin-top: 40px; color: #00407a; }
+        
+        .news-item { margin-bottom: 10px; }
+        .news-date { font-family: monospace; color: #666; margin-right: 10px; font-weight: bold; }
+        
+        /* 论文/项目列表样式 */
+        .pub-item { display: flex; margin-bottom: 25px; }
+        .pub-img { 
+            width: 120px; height: 80px; object-fit: cover; border-radius: 4px; 
+            border: 1px solid #eee; margin-right: 20px; flex-shrink: 0;
+            background: #f9f9f9; /* 占位背景色 */
+        } 
+        /* 如果暂时没有项目截图，可以把上面的 display:flex 改一下，或者直接不放图片 */
+        
+        .pub-title { font-weight: bold; font-size: 1.05em; }
+        .pub-authors { color: #555; font-style: italic; }
+        .pub-venue { color: #d00000; font-weight: 500; font-size: 0.9em; }
+        
+        /* 响应式 */
+        @media (max-width: 600px) {
+            .header-container { flex-direction: column; text-align: center; }
+            .avatar { margin-right: 0; margin-bottom: 20px; }
+            .pub-item { flex-direction: column; }
+            .pub-img { width: 100%; height: auto; margin-bottom: 10px; display: none;} /* 手机端隐藏项目图保持简洁 */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-container">
+        <img src="https://github.com/songchanghao.png" alt="Changhao Song" class="avatar">
+        
+        <div>
+            <h1>Song, Changhao (宋昌浩)</h1>
+            <p>
+                Junior Undergraduate Student<br>
+                <a href="https://scgy.ustc.edu.cn/" target="_blank">School of the Gifted Young (SCGY)</a><br>
+                <a href="https://www.ustc.edu.cn/" target="_blank">University of Science and Technology of China (USTC)</a>
+            </p>
+            <p>
+                <i class="fas fa-envelope"></i> Email: <a href="mailto:你的邮箱@mail.ustc.edu.cn">你的邮箱@mail.ustc.edu.cn</a> <br>
+                <i class="fab fa-github"></i> <a href="https://github.com/songchanghao">Github</a> / 
+                <i class="fas fa-file-pdf"></i> <a href="#">Curriculum Vitae</a> </p>
+        </div>
+    </div>
+
+    <section>
+        <h2>Biography</h2>
+        <p>
+            Hi, I am a third-year undergraduate student majoring in <strong>Computer Science</strong>. 
+            I am a member of the <a href="https://scgy.ustc.edu.cn/">School of the Gifted Young (SCGY)</a> at USTC, 
+            an elite program focusing on rigorous mathematics and physics foundations.
+        </p>
+        
+        <p>
+            My research interests lie broadly in 
+            <strong>[填写你的方向1, e.g., Machine Learning Systems]</strong> and 
+            <strong>[填写你的方向2, e.g., High-Performance Computing]</strong>. 
+            Specifically, I am interested in how to 
+            <strong>[一句话描述你想解决什么问题, e.g., optimize large-scale model training efficiency]</strong>.
+        </p>
+        
+        <p style="color: #d00000; font-weight: 500;">
+            I am actively looking for a research internship for Summer 2025.
+        </p>
+    </section>
+
+    <section>
+        <h2>News</h2>
+        <div class="news-item">
+            <span class="news-date">[Sep. 2024]</span>
+            Awarded the National Scholarship (Top 2%). </div>
+        <div class="news-item">
+            <span class="news-date">[Jun. 2024]</span>
+            Started research on [Topic] advised by Prof. [Name].
+        </div>
+    </section>
+
+    <section>
+        <h2>Selected Projects</h2>
+
+        <div class="pub-item">
+            <div>
+                <div class="pub-title">
+                    <a href="[你的项目GitHub链接]">[项目名称 1]: [一句高大上的副标题]</a>
+                </div>
+                <p>
+                    Developed a <strong>[核心技术, e.g., distributed key-value store]</strong> based on <strong>[算法/协议, e.g., Raft consensus protocol]</strong>. 
+                    Implemented log replication, leader election, and snapshotting mechanisms. 
+                    Achieved <strong>[量化指标, e.g., 10k QPS throughput]</strong> under simulated network partitions.
+                </p>
+                <div class="pub-venue">Course Project: Distributed Systems (Score: 95/100)</div>
+            </div>
+        </div>
+
+        <div class="pub-item">
+            <div>
+                <div class="pub-title">
+                    <a href="[你的项目GitHub链接]">[项目名称 2]: [一句高大上的副标题]</a>
+                </div>
+                <p>
+                    Reproduced the paper <em>"[论文名字]"</em> (CVPR 202X). 
+                    Implemented the <strong>[模型名]</strong> architecture using PyTorch. 
+                    Optimized the training loop to reduce memory usage by <strong>[X%]</strong>.
+                </p>
+                <div class="pub-venue">Self-motivated Research / Course Project</div>
+            </div>
+        </div>
+
+    </section>
+
+    <section>
+        <h2>Misc</h2>
+        <ul>
+            <li><strong>Teaching Assistant:</strong> Data Structures (Fall 2024).</li>
+            <li><strong>Skills:</strong> C/C++, Python, CUDA, PyTorch, Linux Kernel.</li>
+            <li><strong>Hobbies:</strong> Badmiton, Photography.</li>
+        </ul>
+    </section>
+
+    <footer style="margin-top: 60px; color: #888; font-size: 0.8em; text-align: center;">
+        <p>Last updated: Dec 2025 | Template inspired by academic pages.</p>
+    </footer>
+
+</body>
+</html>
