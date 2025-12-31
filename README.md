@@ -49,10 +49,10 @@ My research interests lie broadly in **Computer Graphics** and **Neural Renderin
 
 | Project | Description & Tech Stack |
 | :--- | :--- |
-| **LTFE**<br>*(CVPR Submission)* | [cite_start]📝 **Description:** The first deep learning frame extrapolation framework for transparent objects[cite: 1200]. [cite_start]Designed an onion-like layered architecture and a **Mask-guided Layer Compositing** strategy to resolve pixel collisions using atomic operations[cite: 1203].<br>🛠 **Tech:** `PyTorch` `Unreal Engine 5` `MegaDepth` <br>🔗 [Code](https://github.com/sch997/YOUR_REPO_NAME) |
-| **Mob-3DGSSS**<br>*(Ongoing Research)* | 📝 **Description:** Efficient Super-Resolution and Frame Interpolation for Real-Time 3DGS on Mobile Devices. [cite_start]Analyzing trade-offs between rendering quality (PSNR/SSIM) and inference speed[cite: 1213, 1216].<br>🛠 **Tech:** `Python` `C++` `3DGS` <br>🔗 [Code](https://github.com/sch997/YOUR_REPO_NAME) |
+| **LTFE**<br>*(CVPR Submission)* | [cite_start]📝 **Description:** The first deep learning frame extrapolation framework for transparent objects[cite: 1200]. [cite_start]Designed an onion-like layered architecture and a **Mask-guided Layer Compositing** strategy to resolve pixel collisions using atomic operations[cite: 1203].<br>🛠 **Tech:** `PyTorch` `Unreal Engine 5` `MegaDepth` <br>🔗 |
+| **Mob-3DGSSS**<br>*(Ongoing Research)* | 📝 **Description:** Efficient Super-Resolution and Frame Interpolation for Real-Time 3DGS on Mobile Devices. [cite_start]Analyzing trade-offs between rendering quality (PSNR/SSIM) and inference speed[cite: 1213, 1216].<br>🛠 **Tech:** `Python` `C++` `3DGS` <br>🔗  |
 | **OS Kernel**<br>*(Course Project)* | [cite_start]📝 **Description:** Implemented a Unix-like OS kernel in C++ on QEMU, featuring memory management and process scheduling[cite: 1223].<br>🛠 **Tech:** `C++` `QEMU` `OS Dev` <br>🔗 [Code](https://github.com/sch997/YOUR_REPO_NAME) |
-| **FPGA CPU**<br>*(Course Project)* | [cite_start]📝 **Description:** Designed a five-stage pipeline CPU and VGA driver in Verilog, deployed on FPGA to run a 15-puzzle game[cite: 1225].<br>🛠 **Tech:** `Verilog` `FPGA` `Hardware` <br>🔗 [Code](https://github.com/sch997/YOUR_REPO_NAME) |
+| **FPGA CPU**<br>*(Course Project)* | [cite_start]📝 **Description:** Designed a five-stage pipeline CPU and VGA driver in Verilog, deployed on FPGA to run a 15-puzzle game[cite: 1225].<br>🛠 **Tech:** `Verilog` `FPGA` `Hardware` <br>🔗 |
 
 ---
 
