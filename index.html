@@ -6,61 +6,81 @@
     <title>Changhao Song | USTC</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* 保持极简风格，为了阅读体验优化了字体和间距 */
+        /* Global Styles */
         body {
             font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
             line-height: 1.6;
             color: #333;
-            max-width: 860px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 40px 20px;
+            background-color: #fff;
         }
-        a { color: #00407a; text-decoration: none; }
-        a:hover { text-decoration: underline; }
+        a { color: #0066cc; text-decoration: none; transition: color 0.2s; }
+        a:hover { color: #00407a; text-decoration: underline; }
         
-        .header-container { display: flex; align-items: center; margin-bottom: 40px; }
+        /* Header */
+        .header-container { display: flex; align-items: center; margin-bottom: 50px; }
         .avatar { 
-            width: 160px; height: 160px; border-radius: 50%; object-fit: cover; margin-right: 40px; 
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            width: 180px; height: 180px; border-radius: 50%; object-fit: cover; margin-right: 50px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15); border: 2px solid #f0f0f0;
         }
-        
-        h1 { font-size: 2.2em; margin-bottom: 5px; }
-        h2 { font-size: 1.4em; border-bottom: 1px solid #ddd; padding-bottom: 8px; margin-top: 40px; color: #00407a; }
-        strong { font-weight: 600; }
-        
-        .news-item { margin-bottom: 10px; }
-        .news-date { font-family: monospace; color: #666; margin-right: 10px; font-weight: bold; }
-        
-        /* 论文/项目列表样式 */
-        .pub-item { display: flex; margin-bottom: 25px; }
-        .pub-img { 
-            width: 120px; height: 80px; object-fit: cover; border-radius: 4px; 
-            border: 1px solid #eee; margin-right: 20px; flex-shrink: 0;
-            background: #f9f9f9;
-            display: none; /* 默认隐藏图片，除非你有截图上传 */
-        } 
-        
-        .pub-content { flex: 1; }
-        .pub-title { font-weight: bold; font-size: 1.05em; }
-        .pub-authors { color: #555; font-style: italic; margin: 4px 0; }
-        .pub-venue { color: #d00000; font-weight: 500; font-size: 0.9em; }
-        .pub-desc { font-size: 0.95em; color: #444; margin-top: 6px; }
+        .header-info h1 { font-size: 2.4em; margin-bottom: 10px; color: #222; }
+        .header-info p { margin: 5px 0; font-size: 1.1em; color: #555; }
+        .header-icons { margin-top: 15px; }
+        .header-icons a { margin-right: 20px; color: #444; font-size: 1.1em; }
+        .header-icons a:hover { color: #0066cc; }
 
-        /* 标签样式 */
-        .tag {
-            display: inline-block;
-            background-color: #f1f1f1;
-            color: #555;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 0.8em;
-            margin-right: 5px;
+        /* Sections */
+        section { margin-bottom: 50px; }
+        h2 { 
+            font-size: 1.5em; 
+            border-bottom: 2px solid #f0f0f0; 
+            padding-bottom: 10px; 
+            margin-bottom: 25px; 
+            color: #111; 
+            letter-spacing: 0.5px;
         }
+        strong { font-weight: 600; color: #000; }
         
-        /* 响应式 */
-        @media (max-width: 600px) {
+        /* News */
+        .news-item { margin-bottom: 12px; display: flex; }
+        .news-date { 
+            min-width: 100px; font-family: 'Courier New', monospace; 
+            color: #d00000; font-weight: bold; font-size: 0.95em; 
+        }
+        .news-content { flex: 1; }
+
+        /* Publications & Projects */
+        .pub-item { display: flex; margin-bottom: 30px; align-items: flex-start; }
+        .pub-content { flex: 1; }
+        .pub-title { font-weight: 700; font-size: 1.1em; color: #222; margin-bottom: 5px; }
+        .pub-authors { color: #555; font-style: normal; margin-bottom: 5px; font-size: 0.95em; }
+        .pub-venue { font-style: italic; color: #d00000; font-weight: 500; font-size: 0.95em; margin-bottom: 8px; }
+        .pub-desc { font-size: 0.95em; color: #444; text-align: justify; margin-top: 8px; line-height: 1.5; }
+        .me { text-decoration: underline; font-weight: bold; color: #000; }
+
+        /* Education Table */
+        .edu-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        .edu-table td { padding: 5px 0; vertical-align: top; }
+        .edu-logo { width: 50px; margin-right: 15px; }
+        .edu-school { font-weight: bold; font-size: 1.05em; }
+        .edu-meta { color: #666; font-size: 0.95em; float: right; }
+        .edu-details { font-size: 0.9em; color: #555; margin-top: 5px; }
+
+        /* Tags */
+        .tag {
+            display: inline-block; background-color: #eef4fa; color: #00407a;
+            padding: 2px 8px; border-radius: 4px; font-size: 0.75em;
+            margin-right: 6px; margin-top: 8px; font-weight: 600; border: 1px solid #dce8f5;
+        }
+
+        /* Responsive */
+        @media (max-width: 700px) {
             .header-container { flex-direction: column; text-align: center; }
-            .avatar { margin-right: 0; margin-bottom: 20px; }
+            .avatar { margin-right: 0; margin-bottom: 20px; width: 150px; height: 150px; }
+            .news-item { flex-direction: column; }
+            .edu-meta { float: none; display: block; }
         }
     </style>
 </head>
@@ -69,70 +89,91 @@
     <div class="header-container">
         <img src="https://github.com/sch997.png" alt="Changhao Song" class="avatar">
         
-        <div>
-            <h1>Song, Changhao (宋昌浩)</h1>
-            <p>
-                Junior Undergraduate Student<br>
-                <a href="https://scgy.ustc.edu.cn/" target="_blank">School of the Gifted Young (SCGY)</a><br>
-                <a href="https://www.ustc.edu.cn/" target="_blank">University of Science and Technology of China (USTC)</a>
-            </p>
-            <p>
-                <i class="fas fa-envelope"></i> Email: <a href="mailto:eurus@mail.ustc.edu.cn">eurus@mail.ustc.edu.cn</a> <br>
-                <i class="fab fa-github"></i> <a href="https://github.com/sch997">Github: sch997</a> / 
-                <i class="fas fa-file-pdf"></i> <a href="./CV.pdf" target="_blank">Curriculum Vitae</a> 
-            </p>
+        <div class="header-info">
+            <h1>Changhao Song (宋昌浩)</h1>
+            <p>Undergraduate Student</p>
+            <p><strong>School of the Gifted Young (SCGY)</strong></p>
+            <p><a href="https://www.ustc.edu.cn/" target="_blank">University of Science and Technology of China (USTC)</a></p>
+            
+            <div class="header-icons">
+                <a href="mailto:eurus@mail.ustc.edu.cn"><i class="fas fa-envelope"></i> Email</a>
+                <a href="https://github.com/sch997" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="./CV.pdf" target="_blank"><i class="fas fa-file-alt"></i> CV</a>
+            </div>
         </div>
     </div>
 
     <section>
         <h2>Biography</h2>
         <p>
-            Hi, I am a third-year undergraduate student majoring in <strong>Computer Science and Technology</strong>. 
-            I am a member of the <a href="https://scgy.ustc.edu.cn/">School of the Gifted Young (SCGY)</a> at USTC, 
-            an elite program focusing on rigorous mathematics and physics foundations.
+            I am a third-year undergraduate student majoring in <strong>Computer Science and Technology</strong> at the 
+            <a href="https://scgy.ustc.edu.cn/" target="_blank">School of the Gifted Young (SCGY)</a>, USTC. 
+            My initial passion for computer systems was sparked by the logic of "redstone" in Minecraft, which drove me to pursue a systematic journey in CS.
         </p>
-        
         <p>
-            My research interests lie broadly in <strong>Computer Graphics</strong> and <strong>Neural Rendering</strong>. 
-            Specifically, I am interested in <strong>Real-Time Rendering</strong>, <strong>Frame Extrapolation</strong>, and <strong>3D Gaussian Splatting (3DGS)</strong>. 
-            I aim to bridge the gap between physically accurate rendering and efficient neural approximation.
+            Currently, I am a research assistant guided by <a href="#">Prof. Ligang Liu</a> and <a href="#">Dr. Youcheng Cai</a>. 
+            My previous research focused on <strong>Real-Time Rendering</strong> and <strong>Generative AI</strong> (AIGC). 
+            Recently, I have expanded my research interests to the intersection of <strong>Robotics, Machine Learning, and Computer Vision</strong>, 
+            specifically focusing on <strong>Visual/Tactile Perception</strong> and <strong>Sensorimotor Intelligence</strong> for dexterous manipulation.
         </p>
-        
-        <p>
-            I am currently working as a Research Assistant guided by Prof. Ligang Liu and Dr. Youcheng Cai.
-        </p>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <table class="edu-table">
+            <tr>
+                <td>
+                    <div class="edu-school">University of Science and Technology of China (USTC)</div>
+                    <div class="edu-details">
+                        B.Sc. in Computer Science and Technology (School of the Gifted Young)<br>
+                        <strong>GPA:</strong> 3.55 / 4.3 (Weighted: 85.99)<br>
+                        <strong>Core Courses:</strong> Data Structures (4.3), Computer Organization & Architecture (4.0), Operating Systems (4.0), Linear Algebra (4.0).
+                    </div>
+                </td>
+                <td style="text-align: right;">
+                    <div class="edu-meta">Sep. 2023 - Jun. 2027 (Expected)</div>
+                    <div class="edu-meta">Hefei, China</div>
+                </td>
+            </tr>
+        </table>
     </section>
 
     <section>
         <h2>News</h2>
         <div class="news-item">
-            <span class="news-date">[Dec. 2025]</span>
-            Started research on efficient Super-Resolution for 3DGS on mobile devices (Mob-3DGSSS).
+            <span class="news-date">Dec. 2025</span>
+            <span class="news-content">Started research on Mob-3DGSSS, focusing on efficient Super-Resolution for 3D Gaussian Splatting on mobile devices.</span>
         </div>
         <div class="news-item">
-            <span class="news-date">[Nov. 2025]</span>
-            One paper (LTFE) submitted to <strong>CVPR</strong>.
+            <span class="news-date">Nov. 2025</span>
+            <span class="news-content">One paper (LTFE) submitted to <strong>CVPR 2026</strong>.</span>
         </div>
         <div class="news-item">
-            <span class="news-date">[Sep. 2023]</span>
-            Enrolled in the School of the Gifted Young, USTC.
+            <span class="news-date">Aug. 2025</span>
+            <span class="news-content">Joined the research lab as a Research Assistant working on Neural Rendering.</span>
         </div>
     </section>
 
     <section>
         <h2>Publications / Manuscripts</h2>
+        
         <div class="pub-item">
             <div class="pub-content">
                 <div class="pub-title">
                     LTFE: Learning Layered Transparent Frame Extrapolation for Real-Time Rendering
                 </div>
                 <div class="pub-authors">
-                    Wei Liao, <strong>Changhao Song</strong>, Youcheng Cai, Ligang Liu
+                    Wei Liao, <span class="me">Changhao Song</span>, Youcheng Cai, Ligang Liu
                 </div>
-                <div class="pub-venue">Submitted to IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</div>
+                <div class="pub-venue">Submitted to IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</div>
                 <div class="pub-desc">
-                    We proposed the first deep learning frame extrapolation framework for transparent objects using an onion-like layered architecture. I designed a <strong>Mask-guided Refinement module</strong> to optimize transparent region details and implemented <strong>backward warping with atomic minimum operations</strong> to resolve pixel collisions.
+                    We propose the first deep learning frame extrapolation framework for transparent objects using an onion-like layered architecture inspired by OIT.
+                    I contributed by designing a <strong>Mask-guided Refinement module</strong> to optimize details in transparent regions and implementing backward warping with atomic minimum operations to resolve pixel collisions. 
+                    I also led the dataset construction (UE5) and quantitative evaluation (PSNR/SSIM).
                 </div>
+                <span class="tag">Real-Time Rendering</span>
+                <span class="tag">Frame Extrapolation</span>
+                <span class="tag">Deep Learning</span>
             </div>
         </div>
     </section>
@@ -147,34 +188,41 @@
                 </div>
                 <div class="pub-authors">Research Assistant | Dec. 2025 - Present</div>
                 <p class="pub-desc">
-                    Conducting comparative studies to analyze trade-offs between rendering quality (PSNR/SSIM) and inference speed (FPS) on mobile chipsets. Developed customized Python/C++ scripts for visualization and automated the experimental pipeline for a manuscript targeting <strong>SIGGRAPH 2026</strong>.
+                    Investigating the trade-offs between rendering quality and inference speed on mobile chipsets. 
+                    I am developing customized Python scripts for visualizing 3D Gaussian Splatting reconstruction results and building automated pipelines for data collection, targeting a submission to <strong>SIGGRAPH 2026</strong>.
                 </p>
+                <span class="tag">3D Gaussian Splatting</span>
+                <span class="tag">Mobile Computing</span>
             </div>
         </div>
 
         <div class="pub-item">
             <div class="pub-content">
                 <div class="pub-title">
-                    <a href="#">OS Kernel Implementation</a>
+                    Operating System Kernel Implementation
                 </div>
-                <div class="pub-authors">Course Project: Operating Systems</div>
+                <div class="pub-authors">Course Project (C++ / QEMU)</div>
                 <p class="pub-desc">
-                    Implemented a Unix-like OS kernel in <strong>C++</strong> on QEMU. Features include physical/virtual memory management, process scheduling, and interrupt handling.
+                    Implemented a Unix-like OS kernel in C++ running on QEMU. 
+                    Key features include physical and virtual memory management, process scheduling, and interrupt handling mechanisms.
                 </p>
-                <span class="tag">C++</span> <span class="tag">QEMU</span> <span class="tag">OS Dev</span>
+                <span class="tag">C++</span>
+                <span class="tag">OS Development</span>
             </div>
         </div>
 
         <div class="pub-item">
             <div class="pub-content">
                 <div class="pub-title">
-                    <a href="#">Five-stage Pipeline CPU & 15-Puzzle Game</a>
+                    Five-stage Pipeline CPU & 15-Puzzle Game
                 </div>
-                <div class="pub-authors">Course Project: Digital Circuits</div>
+                <div class="pub-authors">Course Project (Verilog / FPGA)</div>
                 <p class="pub-desc">
-                    Designed a 5-stage pipeline CPU and a VGA driver using <strong>Verilog</strong>. Deployed on an FPGA board to run a fully functional digital sliding puzzle game.
+                    Designed a 5-stage pipeline CPU and a VGA driver in Verilog. 
+                    The system was successfully deployed on an FPGA board to host a fully functional digital sliding puzzle game (15-puzzle).
                 </p>
-                <span class="tag">Verilog</span> <span class="tag">FPGA</span> <span class="tag">Hardware</span>
+                <span class="tag">Verilog</span>
+                <span class="tag">FPGA</span>
             </div>
         </div>
 
@@ -183,15 +231,14 @@
     <section>
         <h2>Skills & Hobbies</h2>
         <ul>
-            <li><strong>Languages:</strong> Chinese (Native), English (TOEFL 100).</li>
-            <li><strong>Development:</strong> C/C++, Python, Verilog, LateX.</li>
-            <li><strong>Frameworks & Tools:</strong> PyTorch, Unreal Engine 5, Linux.</li>
-            <li><strong>Hobbies:</strong> Piano (Grade 10), Guitar, Badminton, Football.</li>
+            <li><strong>Languages:</strong> Chinese (Native), English (TOEFL 100: R24/L28/S21/W27).</li>
+            <li><strong>Programming & Tools:</strong> C/C++, Python, PyTorch, Unreal Engine 5, Verilog, LaTeX, Linux/Git.</li>
+            <li><strong>Hobbies:</strong> Piano (Grade 10), Guitar (Grade 6), Vocal Performance, Badminton, Football.</li>
         </ul>
     </section>
 
-    <footer style="margin-top: 60px; color: #888; font-size: 0.8em; text-align: center;">
-        <p>Last updated: Dec 2025 | Template inspired by academic pages.</p>
+    <footer style="margin-top: 80px; color: #999; font-size: 0.8em; text-align: center; border-top: 1px solid #f0f0f0; padding-top: 20px;">
+        <p>&copy; 2025 Changhao Song. Last updated: Dec. 2025.</p>
     </footer>
 
 </body>
