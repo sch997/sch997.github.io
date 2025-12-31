@@ -21,17 +21,17 @@
 
 > 🎓 **About Me:**
 >
-> [cite_start]I am currently a third-year undergraduate student majoring in **Computer Science and Technology**[cite: 1190]. [cite_start]As a member of the **School of the Gifted Young (SCGY)**[cite: 1189], I have received rigorous training in mathematics and physics. 
+> I am currently a third-year undergraduate student majoring in **Computer Science and Technology**. As a member of the **School of the Gifted Young (SCGY)**, I have received rigorous training in mathematics and physics. 
 >
-> My research interests focus on **Computer Graphics** and **Neural Rendering**, particularly in **Real-Time Rendering** and **3D Gaussian Splatting (3DGS)**. [cite_start]I am currently a Research Assistant guided by Prof. Ligang Liu[cite: 1198].
+> My research interests focus on **Computer Graphics** and **Neural Rendering**, particularly in **Real-Time Rendering** and **3D Gaussian Splatting (3DGS)**. I am currently a Research Assistant guided by Prof. Ligang Liu.
 >
 > 🔭 **I am actively looking for a Research Internship for Summer 2025.**
 
 ---
 
 ### 🔥 News
-* **[Dec. [cite_start]2025]** Started research on efficient Super-Resolution for **3DGS on mobile devices**[cite: 1213].
-* **[Nov. [cite_start]2025]** One paper (**LTFE**) submitted to **CVPR**[cite: 1195].
+* **[Dec. 2025]** Started research on efficient Super-Resolution for **3DGS on mobile devices**.
+* **[Nov. 2025]** One paper (**LTFE**) submitted to **CVPR**.
 
 ---
 
@@ -39,8 +39,8 @@
 
 My research interests lie broadly in **Computer Graphics** and **Neural Rendering**, specifically:
 
-* [cite_start]**Real-Time Rendering**: Frame Extrapolation, Temporal Supersampling[cite: 1197].
-* [cite_start]**Neural Rendering**: 3D Gaussian Splatting (3DGS), View Synthesis[cite: 1213].
+* **Real-Time Rendering**: Frame Extrapolation, Temporal Supersampling.
+* **Neural Rendering**: 3D Gaussian Splatting (3DGS), View Synthesis.
 * **System for Graphics**: Efficient Rendering on Mobile/Edge Devices.
 
 ---
@@ -49,10 +49,10 @@ My research interests lie broadly in **Computer Graphics** and **Neural Renderin
 
 | Project | Description & Tech Stack |
 | :--- | :--- |
-| **LTFE**<br>*(CVPR Submission)* | [cite_start]📝 **Description:** The first deep learning frame extrapolation framework for transparent objects[cite: 1200]. [cite_start]Designed an onion-like layered architecture and a **Mask-guided Layer Compositing** strategy to resolve pixel collisions using atomic operations[cite: 1203].<br>🛠 **Tech:** `PyTorch` `Unreal Engine 5` `MegaDepth` <br>🔗 |
-| **Mob-3DGSSS**<br>*(Ongoing Research)* | 📝 **Description:** Efficient Super-Resolution and Frame Interpolation for Real-Time 3DGS on Mobile Devices. [cite_start]Analyzing trade-offs between rendering quality (PSNR/SSIM) and inference speed[cite: 1213, 1216].<br>🛠 **Tech:** `Python` `C++` `3DGS` <br>🔗  |
-| **OS Kernel**<br>*(Course Project)* | [cite_start]📝 **Description:** Implemented a Unix-like OS kernel in C++ on QEMU, featuring memory management and process scheduling[cite: 1223].<br>🛠 **Tech:** `C++` `QEMU` `OS Dev` <br>🔗 [Code](https://github.com/sch997/YOUR_REPO_NAME) |
-| **FPGA CPU**<br>*(Course Project)* | [cite_start]📝 **Description:** Designed a five-stage pipeline CPU and VGA driver in Verilog, deployed on FPGA to run a 15-puzzle game[cite: 1225].<br>🛠 **Tech:** `Verilog` `FPGA` `Hardware` <br>🔗 |
+| **LTFE**<br>*(CVPR Submission)* | 📝 **Description:** The first deep learning frame extrapolation framework for transparent objects. Designed an onion-like layered architecture and a **Mask-guided Layer Compositing** strategy to resolve pixel collisions using atomic operations.<br>🛠 **Tech:** `PyTorch` `Unreal Engine 5` `MegaDepth` <br> |
+| **Mob-3DGSSS**<br>*(Ongoing Research)* | 📝 **Description:** Efficient Super-Resolution and Frame Interpolation for Real-Time 3DGS on Mobile Devices. Analyzing trade-offs between rendering quality (PSNR/SSIM) and inference speed.<br>🛠 **Tech:** `Python` `C++` `3DGS` <br>  |
+| **OS Kernel**<br>*(Course Project)* | 📝 **Description:** Implemented a Unix-like OS kernel in C++ on QEMU, featuring memory management and process scheduling.<br>🛠 **Tech:** `C++` `QEMU` `OS Dev` <br>  |
+| **FPGA CPU**<br>*(Course Project)* | 📝 **Description:** Designed a five-stage pipeline CPU and VGA driver in Verilog, deployed on FPGA to run a 15-puzzle game.<br>🛠 **Tech:** `Verilog` `FPGA` `Hardware` <br> |
 
 ---
 
