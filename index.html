@@ -8,7 +8,7 @@
     <style>
         /* 保持极简风格，为了阅读体验优化了字体和间距 */
         body {
-            font-family: 'Lato', sans-serif; /* 学术界常用的无衬线字体 */
+            font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
             line-height: 1.6;
             color: #333;
             max-width: 860px;
@@ -26,6 +26,7 @@
         
         h1 { font-size: 2.2em; margin-bottom: 5px; }
         h2 { font-size: 1.4em; border-bottom: 1px solid #ddd; padding-bottom: 8px; margin-top: 40px; color: #00407a; }
+        strong { font-weight: 600; }
         
         .news-item { margin-bottom: 10px; }
         .news-date { font-family: monospace; color: #666; margin-right: 10px; font-weight: bold; }
@@ -35,20 +36,31 @@
         .pub-img { 
             width: 120px; height: 80px; object-fit: cover; border-radius: 4px; 
             border: 1px solid #eee; margin-right: 20px; flex-shrink: 0;
-            background: #f9f9f9; /* 占位背景色 */
+            background: #f9f9f9;
+            display: none; /* 默认隐藏图片，除非你有截图上传 */
         } 
-        /* 如果暂时没有项目截图，可以把上面的 display:flex 改一下，或者直接不放图片 */
         
+        .pub-content { flex: 1; }
         .pub-title { font-weight: bold; font-size: 1.05em; }
-        .pub-authors { color: #555; font-style: italic; }
+        .pub-authors { color: #555; font-style: italic; margin: 4px 0; }
         .pub-venue { color: #d00000; font-weight: 500; font-size: 0.9em; }
+        .pub-desc { font-size: 0.95em; color: #444; margin-top: 6px; }
+
+        /* 标签样式 */
+        .tag {
+            display: inline-block;
+            background-color: #f1f1f1;
+            color: #555;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            margin-right: 5px;
+        }
         
         /* 响应式 */
         @media (max-width: 600px) {
             .header-container { flex-direction: column; text-align: center; }
             .avatar { margin-right: 0; margin-bottom: 20px; }
-            .pub-item { flex-direction: column; }
-            .pub-img { width: 100%; height: auto; margin-bottom: 10px; display: none;} /* 手机端隐藏项目图保持简洁 */
         }
     </style>
 </head>
@@ -61,44 +73,67 @@
             <h1>Song, Changhao (宋昌浩)</h1>
             <p>
                 Junior Undergraduate Student<br>
+                <a href="https://scgy.ustc.edu.cn/" target="_blank">School of the Gifted Young (SCGY)</a><br>
                 <a href="https://www.ustc.edu.cn/" target="_blank">University of Science and Technology of China (USTC)</a>
             </p>
             <p>
                 <i class="fas fa-envelope"></i> Email: <a href="mailto:eurus@mail.ustc.edu.cn">eurus@mail.ustc.edu.cn</a> <br>
-                <i class="fab fa-github"></i> <a href="https://github.com/sch997">Github</a> / 
-                <i class="fas fa-file-pdf"></i> <a href="#">Curriculum Vitae</a> </p>
+                <i class="fab fa-github"></i> <a href="https://github.com/sch997">Github: sch997</a> / 
+                <i class="fas fa-file-pdf"></i> <a href="./CV.pdf" target="_blank">Curriculum Vitae</a> 
+            </p>
         </div>
     </div>
 
     <section>
         <h2>Biography</h2>
         <p>
-            Hi, I am a third-year undergraduate student majoring in <strong>Computer Science</strong>. 
+            Hi, I am a third-year undergraduate student majoring in <strong>Computer Science and Technology</strong>. 
             I am a member of the <a href="https://scgy.ustc.edu.cn/">School of the Gifted Young (SCGY)</a> at USTC, 
-            an elite program focusing on rigorous mathematics and physics foundations.
+            [cite_start]an elite program focusing on rigorous mathematics and physics foundations[cite: 1189, 1190].
         </p>
         
         <p>
-            My research interests lie broadly in 
-            <strong>[填写你的方向1, e.g., Machine Learning Systems]</strong> and 
-            <strong>[填写你的方向2, e.g., High-Performance Computing]</strong>. 
-            Specifically, I am interested in how to 
-            <strong>[一句话描述你想解决什么问题, e.g., optimize large-scale model training efficiency]</strong>.
+            My research interests lie broadly in <strong>Computer Graphics</strong> and <strong>Neural Rendering</strong>. 
+            Specifically, I am interested in <strong>Real-Time Rendering</strong>, <strong>Frame Extrapolation</strong>, and <strong>3D Gaussian Splatting (3DGS)</strong>. 
+            I aim to bridge the gap between physically accurate rendering and efficient neural approximation.
         </p>
         
-        <p style="color: #d00000; font-weight: 500;">
-            I am actively looking for a research internship for Summer 2025.
+        <p>
+            [cite_start]I am currently working as a Research Assistant guided by Prof. Ligang Liu and Dr. Youcheng Cai[cite: 1198].
         </p>
     </section>
 
     <section>
         <h2>News</h2>
         <div class="news-item">
-            <span class="news-date">[Sep. 2024]</span>
-            Awarded the National Scholarship (Top 2%). </div>
+            <span class="news-date">[Dec. 2025]</span>
+            [cite_start]Started research on efficient Super-Resolution for 3DGS on mobile devices (Mob-3DGSSS)[cite: 1213].
+        </div>
         <div class="news-item">
-            <span class="news-date">[Jun. 2024]</span>
-            Started research on [Topic] advised by Prof. [Name].
+            <span class="news-date">[Nov. 2025]</span>
+            [cite_start]One paper (LTFE) submitted to <strong>CVPR</strong>[cite: 1195].
+        </div>
+        <div class="news-item">
+            <span class="news-date">[Sep. 2023]</span>
+            Enrolled in the School of the Gifted Young, USTC.
+        </div>
+    </section>
+
+    <section>
+        <h2>Publications / Manuscripts</h2>
+        <div class="pub-item">
+            <div class="pub-content">
+                <div class="pub-title">
+                    LTFE: Learning Layered Transparent Frame Extrapolation for Real-Time Rendering
+                </div>
+                <div class="pub-authors">
+                    Wei Liao, <strong>Changhao Song</strong>, Youcheng Cai, Ligang Liu
+                </div>
+                <div class="pub-venue">Submitted to IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</div>
+                <div class="pub-desc">
+                    We proposed the first deep learning frame extrapolation framework for transparent objects using an onion-like layered architecture. [cite_start]I designed a <strong>Mask-guided Refinement module</strong> to optimize transparent region details and implemented <strong>backward warping with atomic minimum operations</strong> to resolve pixel collisions[cite: 1195, 1200, 1203].
+                </div>
+            </div>
         </div>
     </section>
 
@@ -106,41 +141,52 @@
         <h2>Selected Projects</h2>
 
         <div class="pub-item">
-            <div>
+            <div class="pub-content">
                 <div class="pub-title">
-                    <a href="[你的项目GitHub链接]">[项目名称 1]: [一句高大上的副标题]</a>
+                    Mob-3DGSSS: Efficient Super-Resolution for Real-Time 3DGS on Mobile
                 </div>
-                <p>
-                    Developed a <strong>[核心技术, e.g., distributed key-value store]</strong> based on <strong>[算法/协议, e.g., Raft consensus protocol]</strong>. 
-                    Implemented log replication, leader election, and snapshotting mechanisms. 
-                    Achieved <strong>[量化指标, e.g., 10k QPS throughput]</strong> under simulated network partitions.
+                <div class="pub-authors">Research Assistant | Dec. 2025 - Present</div>
+                <p class="pub-desc">
+                    Conducting comparative studies to analyze trade-offs between rendering quality (PSNR/SSIM) and inference speed (FPS) on mobile chipsets. [cite_start]Developed customized Python/C++ scripts for visualization and automated the experimental pipeline for a manuscript targeting <strong>SIGGRAPH 2026</strong>[cite: 1213, 1216, 1220].
                 </p>
-                <div class="pub-venue">Course Project: Distributed Systems (Score: 95/100)</div>
             </div>
         </div>
 
         <div class="pub-item">
-            <div>
+            <div class="pub-content">
                 <div class="pub-title">
-                    <a href="[你的项目GitHub链接]">[项目名称 2]: [一句高大上的副标题]</a>
+                    <a href="#">OS Kernel Implementation</a>
                 </div>
-                <p>
-                    Reproduced the paper <em>"[论文名字]"</em> (CVPR 202X). 
-                    Implemented the <strong>[模型名]</strong> architecture using PyTorch. 
-                    Optimized the training loop to reduce memory usage by <strong>[X%]</strong>.
+                <div class="pub-authors">Course Project: Operating Systems</div>
+                <p class="pub-desc">
+                    Implemented a Unix-like OS kernel in <strong>C++</strong> on QEMU. [cite_start]Features include physical/virtual memory management, process scheduling, and interrupt handling[cite: 1222, 1223].
                 </p>
-                <div class="pub-venue">Self-motivated Research / Course Project</div>
+                <span class="tag">C++</span> <span class="tag">QEMU</span> <span class="tag">OS Dev</span>
+            </div>
+        </div>
+
+        <div class="pub-item">
+            <div class="pub-content">
+                <div class="pub-title">
+                    <a href="#">Five-stage Pipeline CPU & 15-Puzzle Game</a>
+                </div>
+                <div class="pub-authors">Course Project: Digital Circuits</div>
+                <p class="pub-desc">
+                    Designed a 5-stage pipeline CPU and a VGA driver using <strong>Verilog</strong>. [cite_start]Deployed on an FPGA board to run a fully functional digital sliding puzzle game[cite: 1224, 1225].
+                </p>
+                <span class="tag">Verilog</span> <span class="tag">FPGA</span> <span class="tag">Hardware</span>
             </div>
         </div>
 
     </section>
 
     <section>
-        <h2>Misc</h2>
+        <h2>Skills & Hobbies</h2>
         <ul>
-            <li><strong>Teaching Assistant:</strong> Data Structures (Fall 2024).</li>
-            <li><strong>Skills:</strong> C/C++, Python, CUDA, PyTorch, Linux Kernel.</li>
-            <li><strong>Hobbies:</strong> Badmiton, Photography.</li>
+            [cite_start]<li><strong>Languages:</strong> Chinese (Native), English (TOEFL 100)[cite: 1193, 1227].</li>
+            <li><strong>Development:</strong> C/C++, Python, Verilog, LateX.</li>
+            [cite_start]<li><strong>Frameworks & Tools:</strong> PyTorch, Unreal Engine 5, Linux[cite: 1228].</li>
+            [cite_start]<li><strong>Hobbies:</strong> Piano (Grade 10), Guitar, Badminton, Football[cite: 1229, 1230].</li>
         </ul>
     </section>
 
